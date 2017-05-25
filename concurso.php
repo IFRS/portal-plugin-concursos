@@ -2,21 +2,21 @@
 if ( ! function_exists('concursos_post_type') ) {
     function concursos_post_type() {
         $labels = array(
-            'name'               => _x( 'Concursos', 'Post Type General Name', 'ifrs-portal-common-plugin' ),
-            'singular_name'      => _x( 'Concurso', 'Post Type Singular Name', 'ifrs-portal-common-plugin' ),
-            'menu_name'          => __( 'Concursos', 'ifrs-portal-common-plugin' ),
-            'name_admin_bar'     => __( 'Concursos', 'ifrs-portal-common-plugin' ),
-            'parent_item_colon'  => __( 'Concurso principal:', 'ifrs-portal-common-plugin' ),
-            'all_items'          => __( 'Todos os Concursos', 'ifrs-portal-common-plugin' ),
-            'add_new_item'       => __( 'Adicionar Novo Concurso', 'ifrs-portal-common-plugin' ),
-            'add_new'            => __( 'Adicionar Novo', 'ifrs-portal-common-plugin' ),
-            'new_item'           => __( 'Novo Concurso', 'ifrs-portal-common-plugin' ),
-            'edit_item'          => __( 'Editar Concurso', 'ifrs-portal-common-plugin' ),
-            'update_item'        => __( 'Atualizar Concurso', 'ifrs-portal-common-plugin' ),
-            'view_item'          => __( 'Ver Concurso', 'ifrs-portal-common-plugin' ),
-            'search_items'       => __( 'Buscar Concurso', 'ifrs-portal-common-plugin' ),
-            'not_found'          => __( 'Não encontrado', 'ifrs-portal-common-plugin' ),
-            'not_found_in_trash' => __( 'Não encontrado na Lixeira', 'ifrs-portal-common-plugin' ),
+            'name'               => _x( 'Concursos', 'Post Type General Name', 'ifrs-portal-plugin-concursos' ),
+            'singular_name'      => _x( 'Concurso', 'Post Type Singular Name', 'ifrs-portal-plugin-concursos' ),
+            'menu_name'          => __( 'Concursos', 'ifrs-portal-plugin-concursos' ),
+            'name_admin_bar'     => __( 'Concursos', 'ifrs-portal-plugin-concursos' ),
+            'parent_item_colon'  => __( 'Concurso principal:', 'ifrs-portal-plugin-concursos' ),
+            'all_items'          => __( 'Todos os Concursos', 'ifrs-portal-plugin-concursos' ),
+            'add_new_item'       => __( 'Adicionar Novo Concurso', 'ifrs-portal-plugin-concursos' ),
+            'add_new'            => __( 'Adicionar Novo', 'ifrs-portal-plugin-concursos' ),
+            'new_item'           => __( 'Novo Concurso', 'ifrs-portal-plugin-concursos' ),
+            'edit_item'          => __( 'Editar Concurso', 'ifrs-portal-plugin-concursos' ),
+            'update_item'        => __( 'Atualizar Concurso', 'ifrs-portal-plugin-concursos' ),
+            'view_item'          => __( 'Ver Concurso', 'ifrs-portal-plugin-concursos' ),
+            'search_items'       => __( 'Buscar Concurso', 'ifrs-portal-plugin-concursos' ),
+            'not_found'          => __( 'Não encontrado', 'ifrs-portal-plugin-concursos' ),
+            'not_found_in_trash' => __( 'Não encontrado na Lixeira', 'ifrs-portal-plugin-concursos' ),
         );
         $capabilities = array(
 			// meta caps (don't assign these to roles)
@@ -43,8 +43,8 @@ if ( ! function_exists('concursos_post_type') ) {
 			'edit_published_posts'   => 'edit_concursos',
 		);
         $args = array(
-            'label'               => __( 'concurso', 'ifrs-portal-common-plugin' ),
-            'description'         => __( 'Concursos', 'ifrs-portal-common-plugin' ),
+            'label'               => __( 'concurso', 'ifrs-portal-plugin-concursos' ),
+            'description'         => __( 'Concursos', 'ifrs-portal-plugin-concursos' ),
             'labels'              => $labels,
             'supports'            => array( 'title', 'editor', 'revisions' ),
             'taxonomies'          => array( 'concurso_status' ),
@@ -75,50 +75,50 @@ if ( ! function_exists('concursos_post_type') ) {
 // MetaBox
 function concursos_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
-        'title'      => __( 'Arquivos Associados', 'ifrs-portal-common-plugin' ),
+        'title'      => __( 'Arquivos Associados', 'ifrs-portal-plugin-concursos' ),
         'post_types' => 'concurso',
         'fields'     => array(
             array(
                 'id'               => 'concurso_file',
-                'name'             => __( 'Edital', 'ifrs-portal-common-plugin' ),
-                'desc'             => __('Envio do Edital original do Concurso', 'ifrs-portal-common-plugin' ),
+                'name'             => __( 'Edital', 'ifrs-portal-plugin-concursos' ),
+                'desc'             => __('Envio do Edital original do Concurso', 'ifrs-portal-plugin-concursos' ),
                 'type'             => 'file_advanced',
                 'max_file_uploads' => 1,
             ),
             array(
                 'id'               => 'concurso_retifica_files',
-                'name'             => __( 'Retificações', 'ifrs-portal-common-plugin' ),
-                'desc'             => __('Envio das retificações ao Edital', 'ifrs-portal-common-plugin' ),
+                'name'             => __( 'Retificações', 'ifrs-portal-plugin-concursos' ),
+                'desc'             => __('Envio das retificações ao Edital', 'ifrs-portal-plugin-concursos' ),
                 'type'             => 'file_advanced',
             ),
             array(
                 'id'               => 'concurso_anexos_files',
-                'name'             => __( 'Anexos', 'ifrs-portal-common-plugin' ),
-                'desc'             => __('Envio dos Anexos do Edital', 'ifrs-portal-common-plugin' ),
+                'name'             => __( 'Anexos', 'ifrs-portal-plugin-concursos' ),
+                'desc'             => __('Envio dos Anexos do Edital', 'ifrs-portal-plugin-concursos' ),
                 'type'             => 'file_advanced',
             ),
             array(
                 'id'               => 'concurso_cronograma_files',
-                'name'             => __( 'Cronograma', 'ifrs-portal-common-plugin' ),
-                'desc'             => __('Envio dos arquivos referentes ao cronograma.', 'ifrs-portal-common-plugin' ),
+                'name'             => __( 'Cronograma', 'ifrs-portal-plugin-concursos' ),
+                'desc'             => __('Envio dos arquivos referentes ao cronograma.', 'ifrs-portal-plugin-concursos' ),
                 'type'             => 'file_advanced',
             ),
             array(
                 'id'               => 'concurso_provas_files',
-                'name'             => __( 'Provas', 'ifrs-portal-common-plugin' ),
-                'desc'             => __('Envio dos arquivos referentes às provas', 'ifrs-portal-common-plugin' ),
+                'name'             => __( 'Provas', 'ifrs-portal-plugin-concursos' ),
+                'desc'             => __('Envio dos arquivos referentes às provas', 'ifrs-portal-plugin-concursos' ),
                 'type'             => 'file_advanced',
             ),
             array(
                 'id'               => 'concurso_resultado_files',
-                'name'             => __( 'Resultados', 'ifrs-portal-common-plugin' ),
-                'desc'             => __('Envio dos arquivos referentes aos resultados', 'ifrs-portal-common-plugin' ),
+                'name'             => __( 'Resultados', 'ifrs-portal-plugin-concursos' ),
+                'desc'             => __('Envio dos arquivos referentes aos resultados', 'ifrs-portal-plugin-concursos' ),
                 'type'             => 'file_advanced',
             ),
             array(
                 'id'               => 'concurso_nomeia_files',
-                'name'             => __( 'Nomeações', 'ifrs-portal-common-plugin' ),
-                'desc'             => __('Envio dos arquivos referentes as nomeações.', 'ifrs-portal-common-plugin' ),
+                'name'             => __( 'Nomeações', 'ifrs-portal-plugin-concursos' ),
+                'desc'             => __('Envio dos arquivos referentes as nomeações.', 'ifrs-portal-plugin-concursos' ),
                 'type'             => 'file_advanced',
             ),
         ),
