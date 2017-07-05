@@ -6,6 +6,7 @@ add_action('init', function() {
     add_role('cadastrador_concursos', __('Cadastrador de Concursos'), array(
         'read'                   => true,
         'upload_files'           => true,
+        'manage_files'           => true,
 
         'create_concursos'       => true,
         'edit_concursos'         => true,
