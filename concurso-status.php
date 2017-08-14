@@ -44,10 +44,10 @@ if ( ! function_exists( 'concurso_status_taxonomy' ) ) {
 }
 
 // Single Term
-$single_term_campus = new Taxonomy_Single_Term( 'concurso_status' );
-$single_term_campus->set( 'priority', 'default' );
-// $single_term_campus->set( 'context', 'normal' );
-$single_term_campus->set( 'metabox_title', __( 'Status', 'ifrs-portal-plugin-concursos' ) );
-$single_term_campus->set( 'force_selection', true );
-$single_term_campus->set( 'indented', false );
-$single_term_campus->set( 'allow_new_terms', false );
+$single_term_concurso_status = new Taxonomy_Single_Term( 'concurso_status' );
+$single_term_concurso_status->set( 'priority', 'default' );
+// $single_term_concurso_status->set( 'context', 'normal' );
+$single_term_concurso_status->set( 'metabox_title', __( 'Status', 'ifrs-portal-plugin-concursos' ) );
+$single_term_concurso_status->set( 'force_selection', true );
+$single_term_concurso_status->set( 'indented', false );
+$single_term_concurso_status->set( 'allow_new_terms', false );
