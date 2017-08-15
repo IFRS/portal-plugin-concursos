@@ -29,16 +29,16 @@ if ( ! function_exists('concursos_post_type') ) {
 
 			// primitive caps used outside of map_meta_cap()
 			'edit_posts'             => 'edit_concursos',
-			'edit_others_posts'      => 'manage_concursos',
-			'publish_posts'          => 'manage_concursos',
+			'edit_others_posts'      => 'edit_concursos',
+			'publish_posts'          => 'publish_concursos',
 			'read_private_posts'     => 'read',
 
 			// primitive caps used inside of map_meta_cap()
 			'read'                   => 'read',
-			'delete_posts'           => 'manage_concursos',
-			'delete_private_posts'   => 'manage_concursos',
-			'delete_published_posts' => 'manage_concursos',
-			'delete_others_posts'    => 'manage_concursos',
+			'delete_posts'           => 'delete_concursos',
+			'delete_private_posts'   => 'delete_concursos',
+			'delete_published_posts' => 'delete_concursos',
+			'delete_others_posts'    => 'delete_concursos',
 			'edit_private_posts'     => 'edit_concursos',
 			'edit_published_posts'   => 'edit_concursos',
 		);
