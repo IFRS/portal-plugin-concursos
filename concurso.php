@@ -110,9 +110,27 @@ function concursos_meta_boxes( $meta_boxes ) {
                 'type'             => 'file_advanced',
             ),
             array(
+                'id'               => 'concurso_listas_files',
+                'name'             => __( 'Listas', 'ifrs-portal-plugin-concursos' ),
+                'desc'             => __('Envio de listas no geral', 'ifrs-portal-plugin-concursos' ),
+                'type'             => 'file_advanced',
+            ),
+            array(
                 'id'               => 'concurso_provas_files',
                 'name'             => __( 'Provas', 'ifrs-portal-plugin-concursos' ),
                 'desc'             => __('Envio dos arquivos referentes às provas', 'ifrs-portal-plugin-concursos' ),
+                'type'             => 'file_advanced',
+            ),
+            array(
+                'id'               => 'concurso_gabaritos_files',
+                'name'             => __( 'Gabaritos', 'ifrs-portal-plugin-concursos' ),
+                'desc'             => __('Envio dos arquivos referentes aos gabaritos', 'ifrs-portal-plugin-concursos' ),
+                'type'             => 'file_advanced',
+            ),
+            array(
+                'id'               => 'concurso_recursos_files',
+                'name'             => __( 'Recursos', 'ifrs-portal-plugin-concursos' ),
+                'desc'             => __('Envio dos arquivos referentes aos recursos', 'ifrs-portal-plugin-concursos' ),
                 'type'             => 'file_advanced',
             ),
             array(
