@@ -16,3 +16,4 @@ Domain Path: /lang
 require_once('taxonomy-single-term/class.taxonomy-single-term.php');
 require_once('concurso-status.php');
 require_once('concurso.php');
+require_once('roles.php');
