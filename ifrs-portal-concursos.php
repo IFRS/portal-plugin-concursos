@@ -17,3 +17,13 @@ require_once('taxonomy-single-term/class.taxonomy-single-term.php');
 require_once('concurso-status.php');
 require_once('concurso.php');
 require_once('roles.php');
+
+register_activation_hook(__FILE__, function () {
+    flush_rewrite_rules();
+    ifrs_portal_concursos_addRoles();
+});
+
+register_deactivation_hook(__FILE__, function () {
+    flush_rewrite_rules();
+    ifrs_portal_concursos_removeRoles();
+});
