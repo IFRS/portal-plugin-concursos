@@ -148,6 +148,23 @@ function concursos_meta_boxes( $meta_boxes ) {
         ),
     );
 
+    $meta_boxes[] = array(
+        'title'      => __( 'Status do Concurso', 'ifrs-portal-plugin-concursos' ),
+        'context'    => 'side',
+        'priority'   => 'low',
+        'post_types' => 'concurso',
+        'fields'     => array(
+            array(
+                'id'             => 'concurso_status',
+                'type'           => 'taxonomy',
+                'taxonomy'       => 'concurso_status',
+                'add_new'        => false,
+                'remove_default' => true,
+                'field_type'     => 'radio_list',
+            )
+        )
+    );
+
     return $meta_boxes;
 }
 add_filter( 'rwmb_meta_boxes', 'concursos_meta_boxes' );

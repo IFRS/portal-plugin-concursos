@@ -42,12 +42,3 @@ if ( ! function_exists( 'concurso_status_taxonomy' ) ) {
     // Hook into the 'init' action
     add_action( 'init', 'concurso_status_taxonomy', 0 );
 }
-
-// Single Term
-$single_term_concurso_status = new Taxonomy_Single_Term( 'concurso_status' );
-$single_term_concurso_status->set( 'priority', 'default' );
-// $single_term_concurso_status->set( 'context', 'normal' );
-$single_term_concurso_status->set( 'metabox_title', __( 'Status', 'ifrs-portal-plugin-concursos' ) );
-$single_term_concurso_status->set( 'force_selection', true );
-$single_term_concurso_status->set( 'indented', false );
-$single_term_concurso_status->set( 'allow_new_terms', false );
