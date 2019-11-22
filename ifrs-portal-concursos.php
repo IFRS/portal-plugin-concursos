@@ -14,6 +14,7 @@ Domain Path: /lang
 */
 require_once('concurso-status.php');
 require_once('concurso.php');
+require_once('queries.php');
 require_once('roles.php');
 
 register_activation_hook(__FILE__, function () {
