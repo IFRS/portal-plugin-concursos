@@ -168,3 +168,26 @@ function concursos_meta_boxes( $meta_boxes ) {
     return $meta_boxes;
 }
 add_filter( 'rwmb_meta_boxes', 'concursos_meta_boxes' );
+
+/**
+ * Templates
+ */
+add_filter('archive_template', function($template) {
+    global $post;
+
+    if ( is_post_type_archive('concurso') && empty(locate_template('archive-concurso.php', false))) {
+        return plugin_dir_path(__FILE__) . 'templates/archive-concurso.php';
+    }
+
+    return $template;
+});
+
+add_filter('single_template', function($template) {
+    global $post;
+
+    if ( is_singular('concurso') && empty(locate_template('single-concurso.php', false))) {
+        return plugin_dir_path(__FILE__) . 'templates/single-concurso.php';
+    }
+
+    return $template;
+});

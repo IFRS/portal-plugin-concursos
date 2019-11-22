@@ -42,3 +42,16 @@ if ( ! function_exists( 'concurso_status_taxonomy' ) ) {
     // Hook into the 'init' action
     add_action( 'init', 'concurso_status_taxonomy', 0 );
 }
+
+/**
+ * Template
+ */
+add_filter('taxonomy_template', function($template) {
+    global $post;
+
+    if ( is_tax('concurso_status') && empty(locate_template('taxonomy-concurso_status.php', false))) {
+        return plugin_dir_path(__FILE__) . 'templates/taxonomy-concurso_status.php';
+    }
+
+    return $template;
+});
