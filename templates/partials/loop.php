@@ -1,4 +1,5 @@
-<div class="accordion" id="accordion-concursos" role="tablist" aria-multiselectable="true">
+<?php $accordion_id = uniqid(); ?>
+<div class="accordion" id="accordion-<?php echo $accordion_id; ?>" role="tablist" aria-multiselectable="true">
 <?php while (have_posts()) : the_post(); ?>
     <div class="card concurso">
         <div class="card-header" role="tab" id="heading-<?php the_ID(); ?>">
@@ -12,7 +13,7 @@
                 </a>
             </h3>
         </div>
-        <div id="collapse-<?php the_ID(); ?>" class="collapse" role="tabpanel" aria-labelledby="heading-<?php the_ID(); ?>" data-parent="#accordion-concursos">
+        <div id="collapse-<?php the_ID(); ?>" class="collapse" role="tabpanel" aria-labelledby="heading-<?php the_ID(); ?>" data-parent="#accordion-<?php echo $accordion_id; ?>">
             <div class="card-body">
                 <?php load_template(plugin_dir_path(__FILE__) . 'item.php'); ?>
             </div>
