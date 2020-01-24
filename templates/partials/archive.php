@@ -27,25 +27,6 @@
         <?php endif; ?>
     </div>
     <div class="col-12 col-lg-3">
-        <aside>
-            <div class="row">
-                <div class="col-12">
-                    <h3><?php _e('Status'); ?></h3>
-                    <ul class="side-list">
-                    <?php
-                        wp_list_categories(array(
-                            'title_li' => '',
-                            'taxonomy' => 'concurso_status',
-                            'hide_empty' => false,
-                        ));
-                    ?>
-                    </ul>
-                </div>
-            </div>
-            <br>
-            <?php if (is_tax('concurso_status')) : ?>
-                <a href="<?php echo get_post_type_archive_link( 'concurso' ); ?>" class="btn btn-default btn-block"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<?php _e('Todos os Concursos'); ?></a>
-            <?php endif; ?>
-        </aside>
+        <?php load_template(plugin_dir_path(__FILE__) . 'filter.php'); ?>
     </div>
 </div>
