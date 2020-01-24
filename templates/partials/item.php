@@ -57,7 +57,7 @@
 ?>
 
 <?php if ( !empty( $concurso_files ) ) : ?>
-    <div class="col-12 concurso-arquivos">
+    <div class="col-12 concurso__arquivos">
         <ul class="nav nav-pills" role="tablist">
             <?php if (!empty($concurso_files['edital'])) : ?><li class=" nav-item" role="presentation"><a class="nav-link active" href="#tab-<?php the_ID(); ?>-edital" aria-controls="tab-<?php the_ID(); ?>-edital" role="tab" data-toggle="tab">Edital</a></li><?php endif; ?>
             <?php if (!empty($concurso_files['anexos'])) : ?><li class=" nav-item" role="presentation"><a class="nav-link" href="#tab-<?php the_ID(); ?>-anexos" aria-controls="tab-<?php the_ID(); ?>-anexos" role="tab" data-toggle="tab">Anexos</a></li><?php endif; ?>
@@ -75,7 +75,7 @@
             <?php if (!empty($files)) : ?>
                 <div role="tabpanel" class="tab-pane fade<?php echo ($grupo == 'edital') ? ' show active' : ''; ?>" id="tab-<?php the_ID(); ?>-<?php echo $grupo; ?>">
                     <div class="table-responsive">
-                        <table class="table table-striped table-arquivos">
+                        <table class="table table-striped">
                             <thead>
                                 <tr>
                                     <th><?php _e('Publicado em'); ?></th>

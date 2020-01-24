@@ -1,6 +1,6 @@
 <div class="accordion" id="accordion-concursos" role="tablist" aria-multiselectable="true">
 <?php while (have_posts()) : the_post(); ?>
-    <div class="card card-concurso">
+    <div class="card concurso">
         <div class="card-header" role="tab" id="heading-<?php the_ID(); ?>">
         <?php $status = get_the_terms(get_the_ID(), 'concurso_status'); ?>
         <?php if ($status && is_post_type_archive('concurso')) : ?>
