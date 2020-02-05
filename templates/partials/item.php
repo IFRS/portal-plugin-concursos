@@ -75,7 +75,7 @@
             <?php if (!empty($files)) : ?>
                 <div role="tabpanel" class="tab-pane fade<?php echo ($grupo == 'edital') ? ' show active' : ''; ?>" id="tab-<?php the_ID(); ?>-<?php echo $grupo; ?>">
                     <div class="table-responsive">
-                        <table class="table table-striped">
+                        <table class="table table-striped concurso__table">
                             <thead>
                                 <tr>
                                     <th><?php _e('Publicado em'); ?></th>
