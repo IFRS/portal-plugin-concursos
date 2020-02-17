@@ -18,9 +18,3 @@
 
     <?php load_template(plugin_dir_path(__FILE__) . 'item.php'); ?>
 </article>
-
-<div class="row">
-    <div class="col-12">
-        <?php get_template_part('partials/share-buttons'); ?>
-    </div>
-</div>
