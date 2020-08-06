@@ -15,7 +15,7 @@
         </div>
         <div id="collapse-<?php the_ID(); ?>" class="collapse" role="tabpanel" aria-labelledby="heading-<?php the_ID(); ?>" data-parent="#accordion-<?php echo $accordion_id; ?>">
             <div class="card-body">
-                <?php load_template(plugin_dir_path(__FILE__) . 'item.php'); ?>
+                <?php load_template(plugin_dir_path(__FILE__) . 'item.php', false); ?>
             </div>
         </div>
     </div>
