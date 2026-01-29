@@ -18,11 +18,11 @@ require_once('queries.php');
 require_once('roles.php');
 
 register_activation_hook(__FILE__, function () {
-    flush_rewrite_rules();
-    ifrs_portal_concursos_addRoles();
+  flush_rewrite_rules();
+  ifrs_portal_concursos_addRoles();
 });
 
 register_deactivation_hook(__FILE__, function () {
-    flush_rewrite_rules();
-    ifrs_portal_concursos_removeRoles();
+  flush_rewrite_rules();
+  ifrs_portal_concursos_removeRoles();
 });
