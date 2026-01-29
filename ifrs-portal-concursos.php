@@ -4,10 +4,10 @@ defined('ABSPATH') or die('No script kiddies please!');
 Plugin Name: IFRS Portal Concursos
 Plugin URI:  https://github.com/IFRS/portal-plugin-concursos
 Description: Plugin para gerenciar Concursos.
-Version:     1.4.1
+Version:     2.0.0-dev
 Author:      Ricardo Moro
 Author URI:  https://github.com/ricardomoro
-License:     GPL3
+License:     GNU General Public License 3.0
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 Text Domain: ifrs-portal-plugin-concursos
 Domain Path: /lang
